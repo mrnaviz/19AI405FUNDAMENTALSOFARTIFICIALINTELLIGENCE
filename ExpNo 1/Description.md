@@ -53,7 +53,8 @@ Now, the Stack becomes empty, which means we have visited all the nodes, and our
  <li>Find its Successors Or neighbors and Check whether the node is visited or not</li>
  <li>If Not Visited, add it to the STACK. Else Call The Function Again Until No more nodes needs to be visited.</li>
 </ol></B>
-<h3>program</h3>
+<h3>PROGRAM</h3>
+
 ```
 #import defaultdict
 from collections import defaultdict
@@ -79,7 +80,7 @@ traversedpath=dfs(graph,start,visited,path)
 print(traversedpath)
 ```
 <hr>
-<h3>Sample Input</h3>
+<h3>Input</h3>
 <hr>
 8 9 <BR>
 A B <BR>
@@ -92,14 +93,16 @@ D F <BR>
 G F <BR>
 F H <BR>
 <hr>
-<h3>Sample Output</h3>
+<h3>Output</h3>
 <hr>
-['A', 'B', 'E', 'D', 'C', 'G', 'F', 'H']
+
+![image](https://github.com/mrnaviz/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/123350791/c02f4913-3d95-407f-b210-649c2289e21c)
+
 
 <hr>
 
 <hr>
-<h3>Sample Input</h3>
+<h3>Input</h3>
 <hr>
 5 5 <BR>
 0 1 <BR>
@@ -108,9 +111,10 @@ F H <BR>
 2 3 <BR>
 2 4 <BR>
 <hr>
-<h3>Sample Output</h3>
-<hr>
-['0', '1', '2', '3', '4']
+
+<h3>OUTPUT</h3>
+
+![image](https://github.com/mrnaviz/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/123350791/dbf3404a-d192-4611-a5f3-96f595193518)
 
 <hr>
 <h3>Result:</h3>
