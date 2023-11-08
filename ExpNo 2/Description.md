@@ -1,6 +1,6 @@
 <h1>ExpNo 2 : Implement Breadth First Search Traversal of a Graph</h1> 
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name:NAVEEN KUMAR B</h3>
+<h3>Register Number: 212222230091</h3>
 <H3>Aim:</H3>
 <p>To Implement Breadth First Search Traversal of a Graph using Python 3.</p>
 <h3>Theory:</h3>
@@ -66,9 +66,43 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 <li>Iterate steps 4 and 5 until all nodes get visited, and there are no more unvisited nodes.</li>
 
 </ol>
+<hr>
+<h3>Program</h3>
+
+```
+from collections import deque
+from collections import defaultdict
+def bfs(graph,start,visited,path):
+    queue = deque()
+    path.append(start)
+    queue.append(start)
+    visited[start] = True
+    while len(queue) != 0:
+        tmpnode = queue.popleft()
+        for neighbour in graph[tmpnode]:
+            if visited[neighbour] == False:
+                path.append(neighbour)
+                queue.append(neighbour)
+                visited[neighbour] = True
+    return path
+
+graph = defaultdict(list)
+v,e = map(int,input().split())
+for i in range(e):
+    u,v = map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = 'A'
+path = []
+visited = defaultdict(bool)
+traversedpath = bfs(graph,start,visited,path)
+print(traversedpath)
+```
+</ol>
 
 <hr>
-<h3>Sample Input</h3>
+<h3>Input 1</h3>
 <hr>
 7 9 <BR>
 A B <BR>
@@ -81,14 +115,16 @@ D E <BR>
 D G <BR>
 G F <BR>
 <hr>
-<h3>Sample Output</h3>
+<h3>Output</h3>
 <hr>
-['A', 'B', 'C', 'F', 'E', 'D', 'G']
+
+![image](https://github.com/mrnaviz/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/123350791/39fa09a9-98fe-4b9e-93b9-e3508491b700)
+
 
 <hr>
 
 <hr>
-<h3>Sample Input</h3>
+<h3>Input 2</h3>
 <hr>
 5 6 <BR>
 0 1 <BR>
@@ -98,9 +134,11 @@ G F <BR>
 2 4 <BR>
 3 4 <BR>
 <hr>
-<h3>Sample Output</h3>
+<h3>Output</h3>
 <hr>
-['0', '1', '2', '3', '4']
+
+![image](https://github.com/mrnaviz/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/123350791/fde03cd7-375c-4932-9154-afeb852de7f9)
+
 <hr>
 <h3>Result:</h3>
 <hr>
